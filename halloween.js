@@ -37,7 +37,11 @@ let niños = [
     nombre: "Oliver",
     edad: 15,
     altura: 1.48,
-}
+},
+    nombre: "Roman",
+    edad: 11,
+    altura: 1.20,
+    
 ];
 
 function trucoTrato() {
