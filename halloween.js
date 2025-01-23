@@ -26,52 +26,117 @@ let niños = [
 {
     nombre: 'Pepe',
     edad: 13,
-    altura: 1.50,
+    altura: 150,
 },
 {
     nombre: "Jorgito",
     edad: 17,
-    altura: 1.30,
+    altura: 130,
 },
 {
     nombre: "Oliver",
     edad: 15,
-    altura: 1.48,
+    altura: 140,
 },
-    nombre: "Roman",
-    edad: 11,
-    altura: 1.20,
-    
+{
+  nombre: "Antonnio",
+  edad: 15,
+  altura: 148,
+},
+{
+  nombre: "Ale",
+  edad: 15,
+  altura: 145,
+},
+{
+  nombre: "Emma",
+  edad: 15,
+  altura: 152,
+},
+{
+nombre: "Machinni",
+edad: 8,
+altura: 80,
+},
+{
+nombre: "Joe",
+edad: 14,
+altura: 119,
+}
 ];
 
+
 function trucoTrato() {
+  let truco = ["👻", "💀", "🎃"];
+  let trato = ["🍫", "🍰", "🍬"];
 
-    let truco = ["Fantasmita 👻 ", "Squeleton 💀", "Bruja 🎃"];
-    let trato = ["Choco 🍫", "Tortiita 🍰 ", "Dulce 🍬"];
+  let randomName = niños[Math.floor(Math.random(niños.nombre) * 8)];
+  // console.log(randomName.nombre);
+  let randomTruco = truco[Math.floor(Math.random(truco) * 3)];
+  // console.log(randomTruco);
+  let randomTrato = trato[Math.floor(Math.random(trato) * 3)];
+  // console.log(randomTrato);
 
-    let randomName = niños[Math.floor(Math.random(niños.nombre) * 3)];
-    // console.log(randomName.nombre);
-    let randomTruco = truco[Math.floor(Math.random(truco) * 3)]
-    // console.log(randomTruco);
-    let randomTrato = trato[Math.floor(Math.random(trato) * 3)]
-    // console.log(randomTrato);
-
-
+  for (let b = 0; b < niños.length; b++) {
     console.log(randomName.nombre + ` muy bien elige truco o trato !!`)
 
-    for(let i = 0; i < truco.length; i++){
-
-        for(let a = 0; a < trato.length; a++){
-            // console.log(truco + trato)
-            let truTra = prompt(`Elige una opcion sin miedo xdd` +`\n 1-Truco`+`\n 2-Trato`)
-
-            if (truTra == 1){
-                console.log(`Elegiste TRUCO mala eleccion obtendras un susto por rata! ${ randomTruco}`)
-            } else if(truTra == 2){
-                console.log(`Elegiste TRATO obtendras un regalo! ${ randomTrato}`)
-            } return;
-        }
+    //PODRIAMOS PONER UN ALERT SOBRE LA SIGUIENTE PREGUNTA
+    let truTra = prompt(
+        `Elige una opcion sin miedo xdd` + `\n 1-Truco` + `\n 2-Trato`
+      );
+      if(truTra == 1){
+        if (randomName.nombre.length <= 3 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras UN SUSTO por rata! ${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        } else if(randomName.nombre.length == 4 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras DOS SUSTOS por rata doble je! ${randomTruco} ${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        } else if(randomName.nombre.length == 5 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras DOS SUSTOS por rata doble je! ${randomTruco}${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        } else if(randomName.nombre.length == 6 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras TRES SUSTOS por rata triple je! ${randomTruco}${randomTruco}${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        } else if(randomName.nombre.length == 7 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras TRES SUSTOS por rata triple je! ${randomTruco}${randomTruco}${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        } else if(randomName.nombre.length == 8 ){
+          console.log(
+            `Elegiste TRUCO mala eleccion obtendras CUATRO SUSTOS por rata cuadruple je! ${randomTruco}${randomTruco}${randomTruco}${randomTruco}`
+          ); if(randomName.edad % 2 !==0){
+            console.log(randomName.nombre + ` Tuviste suerte de que tu edad es IMPAR!`)
+          } else {
+            console.log(randomName.nombre + ` Ups resulto ser que tu edad es PAR, por lo que te llevas de regalo dos sustos mas ${randomTruco}${randomTruco}`)
+          }
+        }; 
+      } else if (truTra == 2) {
+        console.log('TAS ERRAU')
+      } return;
     } 
 }
 trucoTrato();
-
