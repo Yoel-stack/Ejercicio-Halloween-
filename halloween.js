@@ -67,8 +67,8 @@ altura: 119,
 
 
 function trucoTrato() {
-  let truco = ["👻", "💀", "🎃"];
-  let trato = ["🍫", "🍰", "🍬"];
+  let truco = ["👻", "💀", "🎃", "🕷", "🦇"];
+  let trato = ["🍫", "🍰", "🍬", "🍡", "🍭"];
 
   let randomName = niños[Math.floor(Math.random(niños.nombre) * 8)];
   // console.log(randomName.nombre);
